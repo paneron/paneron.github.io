@@ -8,7 +8,7 @@ summary:
       - type: paragraph
         content:
           - type: text
-            text: 'Grab the source on GitHub: https://github.com/isogr/isogr'
+            text: 'Grab the source on GitHub: https://github.com/paneron/paneron'
 contents:
   doc:
     type: doc
