@@ -1,0 +1,57 @@
+{
+  "name": "paneron.org",
+  "private": true,
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "bundle": "react-static bundle",
+    "export": "react-static export",
+    "compile": "rm -r compiled; tsc --outDir compiled",
+    "serve": "serve dist -p 3000 -s",
+    "clean": "rm -r tmp dist compiled artifacts"
+  },
+  "author": {
+    "name": "Ribose Inc.",
+    "email": "open@ribose.com"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@octokit/rest": "^18",
+    "@reach/router": "^1.2.1",
+    "@riboseinc/paneron-website-common": "^0.1.3",
+    "callsite": "^1.0.0",
+    "chroma-js": "^2.1.0",
+    "date-fns": "^2.16.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^6.1.0",
+    "react-static": "^7.5.3",
+    "react-static-plugin-emotion": "^7.6.0",
+    "react-static-plugin-reach-router": "^7.6.0",
+    "react-static-plugin-sitemap": "^7.6.0"
+  },
+  "resolutions": {
+    "**/react-universal-component": "4.0.1"
+  },
+  "devDependencies": {
+    "@types/callsite": "^1.0.31",
+    "@types/chroma-js": "^2.0.0",
+    "@types/marked": "^3.0.1",
+    "@types/node": "^14.14.10",
+    "@types/reach__router": "^1.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-hot-loader": "^4.1.0",
+    "@types/webpack-env": "^1.14.0",
+    "axios": "^0.21.0",
+    "marked": "^3.0.7",
+    "react-hot-loader": "^4.12.11",
+    "react-static-plugin-file-watch-reload": "^1.0.4",
+    "react-static-plugin-typescript": "^7.6.0",
+    "serve": "^11.1.0",
+    "typescript": "^4.1.3"
+  }
+}
