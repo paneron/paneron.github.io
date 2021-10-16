@@ -12,6 +12,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { PageTitle } from '@riboseinc/paneron-website-common/elements/misc'
 import { Card } from '@riboseinc/paneron-website-common/elements/cards'
 import { Button, Link } from '@riboseinc/paneron-website-common/elements/buttons-links';
+import { BIG_SCREEN_BREAKPOINT_PX } from '@riboseinc/paneron-website-common/ui-constants';
 import { ProcessedRelease } from '../types'
 import { GitHubReleaseContextProvider, ReleaseContext } from '../common/Release'
 import { githubRepoInfo } from '../constants'
@@ -30,7 +31,11 @@ export default function () {
           releaseAtBuild={latestRelease}
           repoName={githubRepoInfo.repo}
           repoOwner={githubRepoInfo.owner}>
-        <Card css={css`padding: 2rem;`}>
+        <Card css={css`
+            padding: 1.4rem;
+            @media screen and (min-width: ${BIG_SCREEN_BREAKPOINT_PX}px) {
+              max-width: 80vw;
+            }`}>
           <Release />
         </Card>
       </GitHubReleaseContextProvider>
@@ -82,18 +87,14 @@ const Release: React.FC<Record<never, never>> = function () {
 }
 
 
-
-
 const ReleaseBody = styled.div`
-  font-size: 90%;
-
   p {
     margin: .5rem 0;
   }
 `
 
 export const Label = styled.div`
-  font-size: 80%;
+  font-size: 14px;
   color: #444;
   margin: 0;
   margin-left: .1rem;
