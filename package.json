@@ -20,7 +20,7 @@
     "@emotion/styled": "^11.3.0",
     "@octokit/rest": "^18",
     "@reach/router": "^1.2.1",
-    "@riboseinc/paneron-website-common": "^0.1.3",
+    "@riboseinc/paneron-website-common": "^0.1.4",
     "callsite": "^1.0.0",
     "chroma-js": "^2.1.0",
     "date-fns": "^2.16.1",
