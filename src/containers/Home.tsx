@@ -6,6 +6,9 @@ import { useRouteData } from 'react-static'
 import formatRelative from 'date-fns/formatRelative'
 import format from 'date-fns/format'
 import React, { useContext } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload'
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { PageTitle } from '@riboseinc/paneron-website-common/elements/misc'
 import { Card } from '@riboseinc/paneron-website-common/elements/cards'
 import { Button, Link } from '@riboseinc/paneron-website-common/elements/buttons-links';
@@ -45,7 +48,7 @@ const Release: React.FC<Record<never, never>> = function () {
               css={css`display: inline-block; margin-bottom: .5rem;`}
               to={ctx.specificDLLink}
               title={`Download${ctx.latestRelease?.name ? ` v${ctx.latestRelease.name}` : null} for ${ctx.userOS}`}>
-            {/*<FontAwesomeIcon icon={faDownload} />*/}
+            <FontAwesomeIcon icon={faDownload} />
             &ensp;
             Download Paneron Desktop for {ctx.userOS}
           </Button>
@@ -69,7 +72,7 @@ const Release: React.FC<Record<never, never>> = function () {
           ? <ReleaseBody dangerouslySetInnerHTML={{ __html: ctx.latestRelease.notes }} />
           : <br />}
         <Link to={ctx.allReleasesURL}>
-          {/*<FontAwesomeIcon icon={faGithub} />*/}
+          <FontAwesomeIcon icon={faGithub} />
           &ensp;
           Read all release notes
         </Link>
